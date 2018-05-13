@@ -18,8 +18,8 @@
 ### Instalacion
 
 - Clonar repositorio https://github.com/vchibilisco/test-ml.git
-- Ejecutar comando npm install
-- Iniciar proyecto con comando npm run dev
+- Ejecutar comando `npm install`
+- Iniciar proyecto con comando `npm run dev`
 - El servicio se inicia en puerto :8080
 
 ## Uso
@@ -72,4 +72,26 @@
         "ratio": "0.25"
       }
 
+## Deploy en Google Cloud
 
+- Es necesario poseer una cuenta en Google Cloud, y cread un proyecto.
+- Instalar Google Cloud SDK.
+- Ejecutar gcloud init. Este comando permite configurar Google Cloud SDK.
+- En la carpeta del proyecto, se debe configurar lo siguiente:
+  - Crear un archivo app.yaml con la siguiente configuracion:
+
+```bash
+runtime: nodejs
+env: flex
+```
+
+  - En el archivo package.json agregar el siguiente atributo:
+
+```bash
+"engines": {
+  "node": "8.11.1",
+  "npm": "5.6.0"
+}
+```
+
+- Finalmente ejecutar `gcloud app deploy`
