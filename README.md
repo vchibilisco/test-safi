@@ -5,8 +5,8 @@
 - NodeJS: 8.11.1
 - ExpressJS: 4.16.2
 - Mongodb Drive: 3.1.0-beta4
-- [MongoDB]: (https://mlab.com/)
-- [Google Cloud]: (https://cloud.google.com/)
+- [MongoDB](https://mlab.com/)
+- [Google Cloud](https://cloud.google.com/)
 
 ## Setup
 
