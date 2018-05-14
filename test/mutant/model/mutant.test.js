@@ -28,7 +28,7 @@ describe('Suite Mutant >', () => {
     clientDB.close();
   });
 
-  describe('isMutant function', () => {
+  describe('isMutant function >', () => {
 
     it('Should return true', done => {
       const dna = ["ATGCTA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"];
@@ -48,7 +48,8 @@ describe('Suite Mutant >', () => {
 
   });
 
-  describe('stats function', () => {
+  describe('stats function >', () => {
+
     it('should return ratio = 1.00', done => {
       const expected = {
         'count_mutant_dna': 1,
@@ -63,4 +64,5 @@ describe('Suite Mutant >', () => {
       })
     });
   });
+
 });
