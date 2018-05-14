@@ -7,7 +7,7 @@ var port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/mutantRoute');
+var routes = require('./api/routes');
 
 routes(app);
 

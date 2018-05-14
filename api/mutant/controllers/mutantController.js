@@ -1,18 +1,24 @@
 'use stricts';
 
-const Mutant = require('../model/mutant');
+const Mutant = require('../model/mutant'),
+  exception = require('../exception/exception');
+
 const SEQUENCE_NUMBER =  4;
 
 exports.isMutant = (req, res) => {
   countMutantSequence = 0;
   const dna = req.body.dna;
   const isNotQuadraticMatrix = dna.find(sequence => sequence.length !== dna.length);
-  
-  if (isNotQuadraticMatrix)
-    res.status(403).json('It cannot be processed the dna');
 
-  if (dna.length < SEQUENCE_NUMBER)
-    res.status(403).json('It cannot be processed the dna');
+  if (isNotQuadraticMatrix) {
+    res.status(exception['NotQuadraticMatrix'].status).json({ result: exception['NotQuadraticMatrix'].message });
+    return;
+  }
+
+  if (dna.length < SEQUENCE_NUMBER) {
+    res.status(exception['MinimunSequence'].status).json({ result: exception['MinimunSequence'].message });
+    return;
+  }
 
   const dnaUpperCase = dna.map(sequence => sequence.toUpperCase());  
 
@@ -26,7 +32,7 @@ exports.isMutant = (req, res) => {
 
 exports.stats = (req, res) => {
   Mutant.stats(req.app.dbCollection, (err, result) => {
-    if (err) res.stats(403).send('Error');
+    if (err) res.status(403).json('Error');
 
     res.status(200).json({
         "count_mutant_dna": result.count_mutant_dna,

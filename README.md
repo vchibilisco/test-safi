@@ -7,6 +7,8 @@
 - Mongodb Drive: 3.1.0-beta4
 - [MongoDB](https://mlab.com/)
 - [Google Cloud](https://cloud.google.com/)
+- Mocha: 5.1.1,
+- Mongo-mock: 3.1.0
 
 ## Setup
 
@@ -95,3 +97,7 @@ env: flex
 ```
 
 - Finalmente ejecutar `gcloud app deploy`
+
+## Test
+
+Ejecutar el comando `npm test`
