@@ -1,5 +1,3 @@
-'use stricts';
-
 const Mutant = require('../model/mutant'),
   exception = require('../exception/exception');
 

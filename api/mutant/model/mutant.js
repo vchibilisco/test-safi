@@ -1,5 +1,3 @@
-'use strict'
-
 const MINIMUM_SEQUENCE_REQUIRED = 2;
 const MUTANT_DNA_SEQUENCES = ['AAAA', 'TTTT', 'CCCC', 'GGGG'];
 

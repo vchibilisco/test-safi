@@ -1,15 +1,10 @@
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    mongoClient = require('mongodb').MongoClient;
+const express = require('express'),
+  mongoClient = require('mongodb').MongoClient;
 
-var app = express();
-var port = process.env.PORT || 8080;
+const app = express();
+require('./api/middleware')(app);
 
-app.use(bodyParser.json());
-
-var routes = require('./api/routes');
-
-routes(app);
+const port = process.env.PORT || 8080;
 
 mongoClient.connect('mongodb://mlmutant:mlmutant@ds117590.mlab.com:17590/ml-mutant', (err , client) => {
   if (err) return console.log(err);

@@ -31,21 +31,21 @@
 
 #### Evaluar si ADN es mutante
 
-- URL: http://localhost:8080/mutant
+- URL: http://localhost:8080/api/v1/mutant
 
 #### Recuperar estadistica
 
-- URL: http://localhost:8080/stats
+- URL: http://localhost:8080/api/v1/stats
 
 ### Servicio Google Cloud con Postman
 
 #### Evaluar si ADN es mutante
 
-- URL: https://mlmutant-203923.appspot.com/mutant
+- URL: https://mlmutant-203923.appspot.com/api/v1/mutant
 
 #### Recuperar estadistica
 
-- URL: https://mlmutant-203923.appspot.com/stats
+- URL: https://mlmutant-203923.appspot.com/api/v1/stats
 
 ### Ejemplos
 #### Evaluar si ADN es mutante
@@ -101,3 +101,9 @@ env: flex
 ## Test
 
 Ejecutar el comando `npm test`
+
+# Nota
+
+- Falta cobertura de UT del controlador.
+- Falta una suite de AT.
+- Falta test de rendimiento.

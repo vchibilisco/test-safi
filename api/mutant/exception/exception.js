@@ -1,5 +1,3 @@
-'use stricts';
-
 const errors = {
   NotQuadraticMatrix: {
     status: 403,
