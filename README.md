@@ -32,11 +32,11 @@ cd frontend
 npm start
 ```
 
-###Description
+### Description
 
 The idea of ​​this test is to show a track of values ​​in a week.
 My solution is to work with metricid and show the data based on the metricid, showing all the data.
 Another possible solution, which was not raised, is show the average metric by day, or find the max/min metric by day
 
-###TODO
+### TODO
 Missing add UT for VisualizeData component
