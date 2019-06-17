@@ -1,109 +1,42 @@
-# Test Mercado Libre - Buscar ADN mutante
+## TEST for Safi
 
-# Tecnologia
+This project was created with Windows OS.
 
-- NodeJS: 8.11.1
-- ExpressJS: 4.16.2
-- Mongodb Drive: 3.1.0-beta4
-- [MongoDB](https://mlab.com/)
-- [Google Cloud](https://cloud.google.com/)
-- Mocha: 5.1.1,
-- Mongo-mock: 3.1.0
+### Install dependencies
 
-## Setup
-
-### Requisito
-
-- NodeJS: 8.11.1
-- npm: 5.6.0
-
-### Instalacion
-
-- Clonar repositorio https://github.com/vchibilisco/test-ml.git
-- Ejecutar comando `npm install`
-- Iniciar proyecto con comando `npm run dev`
-- El servicio se inicia en puerto :8080
-
-## Uso
-
-### URL
-### Localmente con Postman
-
-#### Evaluar si ADN es mutante
-
-- URL: http://localhost:8080/api/v1/mutant
-
-#### Recuperar estadistica
-
-- URL: http://localhost:8080/api/v1/stats
-
-### Servicio Google Cloud con Postman
-
-#### Evaluar si ADN es mutante
-
-- URL: https://mlmutant-203923.appspot.com/api/v1/mutant
-
-#### Recuperar estadistica
-
-- URL: https://mlmutant-203923.appspot.com/api/v1/stats
-
-### Ejemplos
-#### Evaluar si ADN es mutante
-
-- Header:
-    Content-Type: application/json
-- Body - raw:
-    { "dna": ["CTGCTA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"] }
-
-- Resultado Exitoso: 
-    Status: 200
-    Body: { "result": "Is mutant" }
-
-- Resultado Error:
-    Status: 403
-    Body: { "result": "Is human" }
-
-#### Recuperar estadistica
-
-- Resultado:
-    Status: 200
-    Body: 
-      {
-        "count_mutant_dna": 1,
-        "count_human_dna": 4,
-        "ratio": "0.25"
-      }
-
-## Deploy en Google Cloud
-
-- Es necesario poseer una cuenta en Google Cloud, y cread un proyecto.
-- Instalar Google Cloud SDK.
-- Ejecutar gcloud init. Este comando permite configurar Google Cloud SDK.
-- En la carpeta del proyecto, se debe configurar lo siguiente:
-  - Crear un archivo app.yaml con la siguiente configuracion:
+-Backend
 
 ```bash
-runtime: nodejs
-env: flex
+cd backend
+npm install
 ```
 
-  - En el archivo package.json agregar el siguiente atributo:
+-Frontend
 
 ```bash
-"engines": {
-  "node": "8.11.1",
-  "npm": "5.6.0"
-}
+cd frontend
+npm install
 ```
 
-- Finalmente ejecutar `gcloud app deploy`
+### Run backend
 
-## Test
+```bash
+cd backend
+npm start
+```
 
-Ejecutar el comando `npm test`
+### Run frontend
 
-# Nota
+```bash
+cd frontend
+npm start
+```
 
-- Falta cobertura de UT del controlador.
-- Falta una suite de AT.
-- Falta test de rendimiento.
+###Description
+
+The idea of ​​this test is to show a track of values ​​in a week.
+My solution is to work with metricid and show the data based on the metricid, showing all the data.
+Another possible solution, which was not raised, is show the average metric by day, or find the max/min metric by day
+
+###TODO
+Missing add UT for VisualizeData component

@@ -1,0 +1,16 @@
+.Visualize-form {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.Visualize-form > div {
+  flex-grow: 1;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 2px 1px #8e9898;
+  margin-left: 5px;
+}
